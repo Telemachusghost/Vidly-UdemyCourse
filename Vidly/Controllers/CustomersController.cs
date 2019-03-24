@@ -36,6 +36,7 @@ namespace Vidly.Controllers
 
         // Could use UpdateCustomerDto data structure
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
             if (!ModelState.IsValid)
